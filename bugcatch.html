@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Hunt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: #f3f3f3;
+        }
+        .game-board {
+        display: grid;
+        grid-template-columns: repeat(5, 120px);
+        grid-gap: 15px;
+        justify-content: center;
+        margin-top: 40px;
+        }
+        .grass {
+        width: 120px;
+        height: 120px;
+        background: green;
+        position: relative;
+        overflow: hidden;
+        box-shadow: inset 0 10px 15px rgba(0,0,0,0.3);
+        }
+        .bug {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 40px;
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <h1 id="final">Catch Butterflies to win! Butterflies: <span id="score">0</span></h1>
+    <div class="game-board">
+        <div class="grass 1" onclick="
+        $('#bug1').fadeIn(10);
+        ">
+            <div class="bug 1" id="bug1"><p>🪱</p></div>
+        </div>
+        <div class="grass 2" onclick="
+        $('#bug2').fadeIn(10);
+        ">
+            <div class="bug 2" id="bug2"><p>🪱</p></div>
+        </div>
+        <div class="grass 3" onclick="
+        $('#bug3').fadeIn(10);
+        ">
+            <div class="bug 3" id="bug3"><p>🪱</p></div>
+        </div>
+        <div class="grass 4" onclick="
+        $('#bug4').fadeIn(10);
+        ">
+            <div class="bug 4" id="bug4"><p>🐞</p></div>
+        </div>
+        <div class="grass 5" onclick="
+        $('#bug5').fadeIn(10);
+        ">
+            <div class="bug 5" id="bug5"><p>🦋</p></div>
+        </div>
+        <div class="grass 6" onclick="
+        $('#bug6').fadeIn(10);
+        ">
+            <div class="bug 6" id="bug6"><p>🪱</p></div>
+        </div>
+        <div class="grass 7" onclick="
+        $('#bug7').fadeIn(10);
+        ">
+            <div class="bug 7" id="bug7"><p>🦋</p></div>
+        </div>
+        <div class="grass 8" onclick="
+        $('#bug8').fadeIn(10);
+        ">
+            <div class="bug 8" id="bug8"><p>🐛</p></div>
+        </div>
+        <div class="grass 9" onclick="
+        $('#bug9').fadeIn(10);
+        ">
+            <div class="bug 9" id="bug9"><p>🦋</p></div>
+        </div>
+        <div class="grass 10" onclick="
+        $('#bug10').fadeIn(10);
+        ">
+            <div class="bug 10" id="bug10"><p>🪱</p></div>
+        </div>
+        <div class="grass 11" onclick="
+        $('#bug11').fadeIn(10);
+        ">
+            <div class="bug 11" id="bug11"><p>🪱</p></div>
+        </div>
+        <div class="grass 12" onclick="
+        $('#bug12').fadeIn(10);
+        ">
+            <div class="bug 12" id="bug12"><p>🐞</p></div>
+        </div>
+        <div class="grass 13" onclick="
+        $('#bug13').fadeIn(10);
+        ">
+            <div class="bug 13" id="bug13"><p>🦋</p></div>
+        </div>
+        <div class="grass 14" onclick="
+        $('#bug14').fadeIn(10);
+        ">
+            <div class="bug 14" id="bug14"><p>🐛</p></div>
+        </div>
+        <div class="grass 15" onclick="
+        $('#bug15').fadeIn(10);
+        ">
+            <div class="bug 15" id="bug15"><p>🦋</p></div>
+        </div>
+        <div class="grass 16" onclick="
+        $('#bug16').fadeIn(10);
+        ">
+            <div class="bug 16" id="bug16"><p>🐛</p></div>
+        </div>
+        <div class="grass 17" onclick="
+        $('#bug17').fadeIn(10);
+        ">
+            <div class="bug 17" id="bug17"><p>🦋</p></div>
+        </div>
+        <div class="grass 18" onclick="
+        $('#bug18').fadeIn(10);
+        ">
+            <div class="bug 18" id="bug18"><p>🐞</p></div>
+        </div>
+        <div class="grass 19" onclick="
+        $('#bug19').fadeIn(10);
+        ">
+            <div class="bug 19" id="bug19"><p>🪱</p></div>
+        </div>
+        <div class="grass 20" onclick="
+        $('#bug20').fadeIn(10);
+        ">
+            <div class="bug 20" id="bug20"><p>🦋</p></div>
+        </div>
+        <div class="grass 21" onclick="
+        $('#bug21').fadeIn(10);
+        ">
+            <div class="bug 21" id="bug21"><p>🪱</p></div>
+        </div>
+        <div class="grass 22" onclick="
+        $('#bug22').fadeIn(10);
+        ">
+            <div class="bug 22" id="bug22"><p>🐞</p></div>
+        </div>
+        <div class="grass 23" onclick="
+        $('#bug23').fadeIn(10);
+        ">
+            <div class="bug 23" id="bug23"><p>🦋</p></div>
+        </div>
+        <div class="grass 24" onclick="
+        $('#bug24').fadeIn(10);
+        ">
+            <div class="bug 24" id="bug24"><p>🪱</p></div>
+        </div>
+        <div class="grass 25" onclick="
+        $('#bug25').fadeIn(10);
+        ">
+            <div class="bug 25" id="bug25"><p>🐛</p></div>
+        </div>
+        <div class="grass 26" onclick="
+        $('#bug26').fadeIn(10);
+        ">
+            <div class="bug 26" id="bug26"><p>🦋</p></div>
+        </div>
+        <div class="grass 27" onclick="
+        $('#bug27').fadeIn(10);
+        ">
+            <div class="bug 27" id="bug27"><p>🐞</p></div>
+        </div>
+        <div class="grass 28" onclick="
+        $('#bug28').fadeIn(10);
+        ">
+            <div class="bug 28" id="bug28"><p>🪱</p></div>
+        </div>
+        <div class="grass 29" onclick="
+        $('#bug29').fadeIn(10);
+        ">
+            <div class="bug 29" id="bug29"><p>🦋</p></div>
+        </div>
+        <div class="grass 30" onclick="
+        $('#bug30').fadeIn(10);
+        ">
+            <div class="bug 30" id="bug30"><p>🪱</p></div>
+        </div>
+        <script>
+            let score = 0;
+            $('.grass').click(function() {
+            const bug = $(this).find('.bug p').text();
+            if (bug === '🦋') {
+                score++;
+                $('#score').text(score);
+                if (score === 10) {
+                    $('#final').text('You won!');
+                }
+            }
+        });
+        </script>
+        <button><a href="index.html">To Clicolony</a></button>
+    </div>
+</body>
+</html>
